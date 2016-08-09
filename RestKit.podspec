@@ -38,7 +38,8 @@ EOS
     os.source_files   = 'Code/ObjectMapping.h', 'Code/ObjectMapping'
     os.dependency       'RestKit/Support'
     os.dependency       'RKValueTransformers', '~> 1.1.0'
-    os.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.6.0'
+    os.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.6.1'
+    os.private_header_files = 'Code/ObjectMapping/**/*_Private.h'
   end
 
   s.subspec 'Network' do |ns|
@@ -71,6 +72,7 @@ EOS
     cdos.source_files = 'Code/CoreData.h', 'Code/CoreData'
     cdos.frameworks   = 'CoreData'
     cdos.dependency 'RestKit/ObjectMapping'
+    cdos.private_header_files = 'Code/CoreData/**/*_Private.h'
   end
 
   s.subspec 'Testing' do |ts|
